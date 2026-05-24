@@ -1,0 +1,120 @@
+.main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  max-width: 48rem;
+  text-align: right;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.back {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.card {
+  width: 100%;
+  max-width: 48rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.15);
+}
+
+.thread {
+  max-height: 55vh;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 0.25rem;
+  text-align: right;
+}
+
+.empty {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+}
+
+.sentence {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  line-height: 1.65;
+}
+
+.sentenceIndex {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-inline-end: 0.35rem;
+}
+
+.composer {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.primaryButton {
+  justify-self: start;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}

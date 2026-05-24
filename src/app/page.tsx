@@ -1,23 +1,16 @@
-import { createClient } from "@/lib/supabase/server";
-
+import StoryList from "./_components/StoryList";
 import styles from "./page.module.css";
 
-const HomePage = async () => {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
+const HomePage = () => {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Story For Everyone</h1>
-      <p className={styles.subtitle}>
-        משחק סיפור אינטראקטיבי למשפחה. בחר את הדמות שלך, צור את העלילה, וגלה
-        איך הסיפור מתפתח.
-      </p>
-      <div className={styles.userBadge}>
-        {user ? `שלום, ${user.email ?? "שחקן"}` : "אורח — עדיין לא מחובר"}
-      </div>
+      <header className={styles.header}>
+        <h1 className={styles.title}>סיפור לכולם</h1>
+        <p className={styles.subtitle}>
+          סיפור שיתופי. כל אחד יכול להתחיל סיפור או להמשיך סיפור קיים.
+        </p>
+      </header>
+      <StoryList />
     </main>
   );
 };
